@@ -20,22 +20,4 @@ public string FullName {
 }
 
 }
-
-
-public class AddressBook
-  {
-    private Dictionary<string, Contact> _contactList { get; set; } = new Dictionary<string, Contact>();
-
-    public void AddContact(Contact person)
-    {
-      _contactList[person.Email] = person;
-    }
-
-    public Contact GetByEmail(string email)
-    {
-      return _contactList[email];
-    }
-  }
-
-
 }
