@@ -21,9 +21,15 @@ public class AddressBook
     
     }
 
+
+// Contact  is what we want to return
+//We are going to Get it by email
+// through the _contactlist in the dictionary
     public Contact GetByEmail(string email)
     {
+    
       return _contactList[email];
+      
     }
   }
 

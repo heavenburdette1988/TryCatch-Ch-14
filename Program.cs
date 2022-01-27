@@ -62,11 +62,18 @@ namespace addressBook
       
         foreach (string email in emails)
         {
+            try{
             Contact contact = addressBook.GetByEmail(email);
+
             Console.WriteLine("----------------------------");
             Console.WriteLine($"Name: {contact.FullName}");
             Console.WriteLine($"Email: {contact.Email}");
             Console.WriteLine($"Address: {contact.Address}");
+            } catch (KeyNotFoundException) {
+                Console.WriteLine("--------------------");
+                Console.WriteLine("email does not exist");
+            }
+
         }
     }
 }
